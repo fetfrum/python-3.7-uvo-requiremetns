@@ -15,6 +15,6 @@ RUN echo "deb https://http.debian.net/debian/ stretch main contrib non-free" > /
   echo 'deb https://deb.nodesource.com/node_8.x stretch main '>> /etc/apt/sources.list && \
   echo 'deb-src https://deb.nodesource.com/node_8.x stretch main '>> /etc/apt/sources.list && \
   apt-get update \
-  && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y libxmlsec1-dev pkg-config nodejs yarn build-essential 
-RUN pip install -r requirements.txt 
-RUN pip install hvac flask_caching uwsgi
+  && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y libxmlsec1-dev pkg-config nodejs yarn build-essential \
+  && pip install -r requirements.txt \ 
+  && pip install hvac flask_caching uwsgi 
