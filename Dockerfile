@@ -16,5 +16,5 @@ RUN echo "deb https://http.debian.net/debian/ stretch main contrib non-free" > /
   echo 'deb-src https://deb.nodesource.com/node_8.x stretch main '>> /etc/apt/sources.list && \
   apt-get update \
   && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y libxmlsec1-dev pkg-config nodejs yarn build-essential 
-RUN REQUESTS_CA_BUNDLE="/usr/share/ca-certificates/uvo.crt" pip install -r requirements.txt 
-RUN REQUESTS_CA_BUNDLE="/usr/share/ca-certificates/uvo.crt" pip install hvac flask_caching uwsgi
+RUN pip install -r requirements.txt 
+RUN pip install hvac flask_caching uwsgi
