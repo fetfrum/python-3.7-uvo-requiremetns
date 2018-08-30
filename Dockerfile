@@ -3,9 +3,9 @@ ENV PYTHONUNBUFFERED 1
 RUN mkdir /code
 WORKDIR /code
 ADD . /code/
-RUN echo "deb https://http.debian.net/debian/ stretch main contrib non-free" > /etc/apt/sources.list && \
-  echo "deb https://http.debian.net/debian/ stretch-updates main contrib non-free" >> /etc/apt/sources.list && \
-  echo "deb https://security.debian.org/ stretch/updates main contrib non-free" >> /etc/apt/sources.list && \
+RUN echo "deb http://http.debian.net/debian/ stretch main contrib non-free" > /etc/apt/sources.list && \
+  echo "deb http://http.debian.net/debian/ stretch-updates main contrib non-free" >> /etc/apt/sources.list && \
+  echo "deb http://security.debian.org/ stretch/updates main contrib non-free" >> /etc/apt/sources.list && \
   apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
   apt-transport-https apt-utils software-properties-common && \
