@@ -8,6 +8,7 @@ hvac>=0.6.3
 marshmallow>=3.0.0b13
 paramiko>=2.4.1
 pyOpenSSL>=17.5.0
+python-dateutil>=2.7.3
 python-gitlab>=1.5.1
 python3-saml>=1.4.0
 redis>=2.10.6
